@@ -3,6 +3,9 @@ PRODUCT_NAME := Warped
 PRODUCT_BRAND := dhemke17
 PRODUCT_DEVICE := generic
 
+ifneq ($(filter warped_maguro warped_toro warped_toroplus,$(TARGET_PRODUCT)),)
+endif
+
 # Common overlay
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -22,18 +25,12 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/warped/overlay/common
 # Common dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/warped/overlay/dictionaries
 
-# Supersu
-PRODUCT_COPY_FILES += \
-    vendor/warped/proprietary/supersu/su:system/xbin/su \
-    vendor/warped/proprietary/common/xbin/busybox:system/xbin/busybox
-
-PRODUCT_COPY_FILES += \
-     vendor/warped/proprietary/common/etc/init.d/91-busybox_linkage.sh:system/etc/init.d/91-busybox_linkage.sh 
-
 # Required packages
 PRODUCT_PACKAGES += \
-    Superuser \
-    Torch
+    Torch \
+    su  \
+    Superuser  \
+    busybox
 
 # system/lib
 PRODUCT_COPY_FILES += \
