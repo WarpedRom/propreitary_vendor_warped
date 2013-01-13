@@ -112,7 +112,7 @@ rm -rf $REPACK/ota/recovery
 	: ${MODVERSION:=}
 	Device=`sed -n -e'/ro\.product.device/s/^.*=//p' $REPACK/ota/system/build.prop`
 	: ${Device:=}
-	OUTFILE=$OUT/$MODVERSION-$Device.zip
+	OUTFILE=$OUT/$MODVERSION-signed-$Device.zip
 
 # Pack it up and sign
 printf "Zipping package..."
