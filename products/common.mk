@@ -3,9 +3,6 @@ PRODUCT_NAME := Warped
 PRODUCT_BRAND := dhemke17
 PRODUCT_DEVICE := generic
 
-ifneq ($(filter warped_maguro warped_toro warped_toroplus,$(TARGET_PRODUCT)),)
-endif
-
 # Common overlay
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -83,7 +80,7 @@ ifdef NIGHTLY
 else
     ifdef RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.warped.version=Warped-AOSP-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC \
+            ro.warped.version=Warped-AOSP-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC) \
             ro.modversion=Warped-AOSP-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
