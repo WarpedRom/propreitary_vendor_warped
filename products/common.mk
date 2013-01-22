@@ -50,6 +50,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/warped/proprietary/common/etc/init.local.rc:root/init.warped.rc
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/warped/proprietary/common/bin/sysinit:system/bin/sysinit
+
+# Compcache/Zram support
+PRODUCT_COPY_FILES += \
+    vendor/warped/proprietary/common/bin/compcache:system/bin/compcache \
+    vendor/warped/proprietary/common/bin/handle_compcache:system/bin/handle_compcache
+
 # T-Mobile theme engine
 include vendor/warped/products/themes_common.mk
 
