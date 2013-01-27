@@ -52,7 +52,10 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/warped/proprietary/common/bin/sysinit:system/bin/sysinit
+    vendor/warped/proprietary/common/bin/sysinit:system/bin/sysinit \
+    vendor/warped/proprietary/common/etc/init.d/00start:system/etc/init.d/00start \
+    vendor/warped/proprietary/common/etc/init.d/00start:system/etc/init.d/02zipalign \
+    vendor/warped/proprietary/common/xbin/zipalign:system/xbin/zipalign
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
@@ -67,9 +70,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40D
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.rommanager.developerid=dhemke17 
 
-PRODUCT_VERSION_MAJOR = 1
-PRODUCT_VERSION_MINOR = 5
-PRODUCT_VERSION_MAINTENANCE = 1
+PRODUCT_VERSION_MAJOR = 2
+PRODUCT_VERSION_MINOR = 0
+PRODUCT_VERSION_MAINTENANCE = 0
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40D
 
