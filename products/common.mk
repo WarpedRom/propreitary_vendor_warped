@@ -54,7 +54,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/warped/proprietary/common/bin/sysinit:system/bin/sysinit \
     vendor/warped/proprietary/common/etc/init.d/00start:system/etc/init.d/00start \
-    vendor/warped/proprietary/common/etc/init.d/00start:system/etc/init.d/02zipalign \
+    vendor/warped/proprietary/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+    vendor/warped/proprietary/common/etc/init.d/02zipalign:system/etc/init.d/02zipalign \
     vendor/warped/proprietary/common/xbin/zipalign:system/xbin/zipalign
 
 # Compcache/Zram support
