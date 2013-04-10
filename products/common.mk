@@ -24,16 +24,17 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/warped/overlay/dictionaries
 
 # Required packages
 PRODUCT_PACKAGES += \
+    busybox \
+    Superuser \
     Torch \
-    su  \
-    Superuser  \
-    busybox
+    su
 
 # system/lib
 PRODUCT_COPY_FILES += \
     vendor/warped/proprietary/common/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
     vendor/warped/proprietary/common/lib/libjni_filtershow_filters.so:system/lib/libjni_filtershow_filters.so \
-    vendor/warped/proprietary/common/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so
+    vendor/warped/proprietary/common/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so 
+
 
 # system/vendor/etc
 PRODUCT_COPY_FILES += \
@@ -63,19 +64,16 @@ PRODUCT_COPY_FILES += \
     vendor/warped/proprietary/common/bin/compcache:system/bin/compcache \
     vendor/warped/proprietary/common/bin/handle_compcache:system/bin/handle_compcache
 
-# T-Mobile theme engine
-include vendor/warped/products/themes_common.mk
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40D
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.rommanager.developerid=dhemke17 
 
-PRODUCT_VERSION_MAJOR = 2
+PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40D
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39
 
 ifdef NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
