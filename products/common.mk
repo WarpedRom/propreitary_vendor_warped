@@ -64,6 +64,9 @@ PRODUCT_COPY_FILES += \
     vendor/warped/proprietary/common/bin/compcache:system/bin/compcache \
     vendor/warped/proprietary/common/bin/handle_compcache:system/bin/handle_compcache
 
+# T-Mobile theme engine
+include vendor/warped/products/themes_common.mk
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39
 
 PRODUCT_PROPERTY_OVERRIDES += \
